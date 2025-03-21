@@ -61,7 +61,7 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'; // Corrected import for Link
 import { prodts } from './Productdata';
-
+import Rating from './Rating';
 export default function Products(props) {
     const location = useLocation();
     const navigate = useNavigate();
@@ -88,7 +88,8 @@ export default function Products(props) {
                     <p className="text-lg font-bold text-gray-900">₹{p.price}</p>
                     <p className="text-sm text-gray-500 line-through">₹{p.oldPrice}</p>
                 </div>
-                <p className="text-sm text-yellow-600">Rating: {p.rating} / 5</p>
+
+                <p className="text-sm text-yellow-600">Rating: {p.rating} / 5 <Rating r={p.rating}></Rating></p>
                 <Link
                     to={`/productdetails/${p._id}`}
                     className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"

@@ -129,6 +129,7 @@
 import React, { useRef, useState } from 'react';
 import mdata from './mobiledata';
 import { useParams } from 'react-router';
+import Rating from './Rating';
 
 export default function MobileDetails() {
     let params = useParams();
@@ -137,6 +138,7 @@ export default function MobileDetails() {
     let imgref = useRef();
 
     return (
+        <>
         <div className="container mx-auto p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Image Gallery */}
@@ -209,10 +211,11 @@ export default function MobileDetails() {
                     {/* Rating */}
                     <div className="space-y-4">
                         <h2 className="text-xl font-semibold text-gray-900">Rating</h2>
-                        <p className="text-sm text-gray-700">{mobileinfo.rating} / 5</p>
+                        <p className="text-sm text-gray-700">{mobileinfo.rating} / 5 <Rating r={mobileinfo.rating}></Rating></p>
                     </div>
                 </div>
             </div>
         </div>
+        </>
     );
 }

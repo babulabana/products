@@ -6,10 +6,11 @@ import Userhome from './Userhome'
 export default function HomeWithlogin() {
     const [userlogin ,setuserlogin] = useState(false)
 
-    let ui = <div><Userhome userlogin={userlogin} setuserlogin={setuserlogin}></Userhome>
+    let ui = <div>
+      <Userhome userlogin={userlogin} setuserlogin={setuserlogin}></Userhome>
     <Logout setuserlogi={setuserlogin}></Logout></div>
   return (
-    <div>
+    <div >
       
       {/* <h1>homewithlogin</h1> 
       

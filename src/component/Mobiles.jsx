@@ -25,6 +25,7 @@
 import React, { useEffect, useState } from 'react';
 import mdata from './mobiledata';
 import { Link } from 'react-router-dom'; // Corrected import for Link
+import Rating from './Rating';
 
 export default function Mobiles() {
     const [mobile, setmobile] = useState([]);
@@ -34,6 +35,7 @@ export default function Mobiles() {
         let md = mdata.map((p) => (
             <div key={p.id} className="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <img src={p.img} alt={p.name} className="w-48 h-48 object-contain mb-4" />
+                <Rating r={p.rating}></Rating>
                 <div className="text-xl font-bold text-gray-900 text-center">{p.name}</div>
                 <div className="mt-2">
                     <Link

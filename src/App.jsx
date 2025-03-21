@@ -17,12 +17,14 @@ function App() {
 
   return (
     <>
+    {/* <Userhome></Userhome> */}
     <Routes>
     <Route path='/login' element={<Login></Login>}></Route>
     <Route path='/logout' element={<Logout></Logout>}></Route>
     <Route path='/userhome' element={<Userhome></Userhome>}></Route>
     <Route path='/homewithlogin' element={<HomeWithlogin></HomeWithlogin>}></Route>
     <Route path='/' element={<HomeWithlogin></HomeWithlogin>}></Route>
+    
     <Route path='/products' element={<Products></Products>}></Route>
     <Route path='/productdetails/:pid' element={<ProductDetails></ProductDetails>}></Route>
     <Route path='/mobiledetails/:pid' element={<MobileDetails></MobileDetails>}></Route>

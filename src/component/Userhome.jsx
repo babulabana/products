@@ -31,7 +31,7 @@ export default function Userhome(props) {
     let d = { userlogin: userlogin };
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className=" bg-gray-100">
             {/* Navigation Bar */}
             <nav className="bg-white shadow-lg">
                 <div className="container mx-auto px-6 py-4">
@@ -91,10 +91,7 @@ export default function Userhome(props) {
             </nav>
 
             {/* Main Content */}
-            <div className="container mx-auto px-6 py-8">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">Welcome to Your Dashboard</h1>
-                <p className="text-gray-700">Explore the features using the navigation above.</p>
-            </div>
+           
         </div>
     );
 }

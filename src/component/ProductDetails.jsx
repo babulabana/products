@@ -62,6 +62,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { prodts } from './Productdata';
+import Rating from './Rating';
 
 export default function ProductDetails() {
     let params = useParams();
@@ -96,7 +97,7 @@ export default function ProductDetails() {
                             <span className="font-semibold">Old Price:</span> {product.oldPrice}
                         </p>
                         <p className="text-gray-600 mb-4">
-                            <span className="font-semibold">Rating:</span> {product.rating}/5
+                            <span className="font-semibold">Rating:</span> {product.rating}/5 <Rating r={product.rating}></Rating>
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-6">{product.description}</p>
                         {/* <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
