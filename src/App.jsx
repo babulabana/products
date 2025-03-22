@@ -11,12 +11,15 @@ import Products from './component/Products'
 import ProductDetails from './component/ProductDetails'
 import MobileDetails from './component/MobileDetails'
 import Mobiles from './component/Mobiles'
+import { Usercontext } from './context/Usercontext'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Usercontext.Provider value={{username:"vishal" ,email:"labanababu1510@gmail.com"}}>
+    <div>
     {/* <Userhome></Userhome> */}
     <Routes>
     <Route path='/login' element={<Login></Login>}></Route>
@@ -33,7 +36,8 @@ function App() {
     <Route path='/mobiles' element={<Mobiles></Mobiles>}></Route>
     {/* <Route path='' element={}></Route> */}
     </Routes>
-    
+    </div>
+    </Usercontext.Provider>
     </>
   )
 }

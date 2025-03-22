@@ -22,14 +22,16 @@
 //     </div>
 //   )
 // }
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import mdata from './mobiledata';
 import { Link } from 'react-router-dom'; // Corrected import for Link
 import Rating from './Rating';
+import { Usercontext } from '../context/Usercontext';
 
 export default function Mobiles() {
     const [mobile, setmobile] = useState([]);
 
+    const User = useContext(Usercontext)
     useEffect(() => {
         // Map through the mobile data and create cards
         let md = mdata.map((p) => (
@@ -51,12 +53,17 @@ export default function Mobiles() {
     }, []);
 
     return (
+    <>
+    <h1  className='text-4xl font-bold'>welcome : {User.username}</h1>
+    <h1>Email : {User.email}</h1>
+
         <div className="container mx-auto p-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mobile Phones</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {mobile}
             </div>
         </div>
+     </>
     );
 }
 
