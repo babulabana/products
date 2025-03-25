@@ -57,6 +57,7 @@ import Rating from './Rating';
 import { Usercontext } from '../context/Usercontext';
 // import Cart from './Cart';
 import { Cartcontext } from '../context/Cartcontext';
+import Counter from './Counter';
 export default function MobileDetails() {
     const User = useContext(Usercontext)
     const Cart = useContext(Cartcontext)
@@ -157,6 +158,7 @@ export default function MobileDetails() {
                           <button onClick={()=>addtocart()} className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
                             Add to Cart
                         </button>
+                        <Counter></Counter>
                     </div>
                     
                 </div>

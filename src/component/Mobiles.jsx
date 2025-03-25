@@ -27,6 +27,7 @@ import mdata from './mobiledata';
 import { Link } from 'react-router-dom'; // Corrected import for Link
 import Rating from './Rating';
 import { Usercontext } from '../context/Usercontext';
+import Counter from './Counter';
 
 export default function Mobiles() {
     const [mobile, setmobile] = useState([]);
@@ -39,17 +40,20 @@ export default function Mobiles() {
                 <img src={p.img} alt={p.name} className="w-48 h-48 object-contain mb-4" />
                 <Rating r={p.rating}></Rating>
                 <div className="text-xl font-bold text-gray-900 text-center">{p.name}</div>
-                <div className="mt-2">
+                <div className="mt-2 flex">
                     <Link
                         to={`/mobiledetails/${p.id}`}
                         className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
                         View Details
                     </Link>
+                    <Counter></Counter>
                 </div>
+               
             </div>
         ));
         setmobile(md);
+        
     }, []);
 
     return (
@@ -61,6 +65,7 @@ export default function Mobiles() {
             <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mobile Phones</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {mobile}
+                
             </div>
         </div>
      </>
