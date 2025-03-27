@@ -20,6 +20,7 @@ function App() {
 
   return (
     <>
+   
     <Link to="/cart" className='underline m-5'>go to Cart</Link>
     <Link to="/mobiles"> mobiles</Link>
     <Usercontext.Provider value={{username:"vishal" ,email:"labanababu1510@gmail.com"}}>
