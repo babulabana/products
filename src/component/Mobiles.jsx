@@ -27,7 +27,8 @@ import mdata from './mobiledata';
 import { Link } from 'react-router-dom'; // Corrected import for Link
 import Rating from './Rating';
 import { Usercontext } from '../context/Usercontext';
-import Counter from './Counter';
+import ItemCounter from './ItemCounter';
+// import Counter from './Counter';
 
 export default function Mobiles() {
     const [mobile, setmobile] = useState([]);
@@ -47,7 +48,8 @@ export default function Mobiles() {
                     >
                         View Details
                     </Link>
-                    <Counter></Counter>
+                    {/* <Counter></Counter> */}
+                    <ItemCounter pid={p.id}></ItemCounter>
                 </div>
                
             </div>

@@ -57,26 +57,30 @@ import Rating from './Rating';
 import { Usercontext } from '../context/Usercontext';
 // import Cart from './Cart';
 import { Cartcontext } from '../context/Cartcontext';
-import Counter from './Counter';
+import ItemCounter from './ItemCounter';
+// import Counter from './Counter';
 export default function MobileDetails() {
     const User = useContext(Usercontext)
     const Cart = useContext(Cartcontext)
     let params = useParams();
     let pid = params.pid;
     const [mobileinfo, setmobileinfo] = useState(mdata.find((p) => p.id == pid));
+
+    const [index,setindex] = useState(Cart.items.findIndex((p)=>p.id==pid))
+
     let imgref = useRef();
 
-    let addtocart=()=>{
+    // let addtocart=()=>{
  
-        let index = Cart.items.findIndex((p)=>p.id==pid);
-        console.log(index)
-        if(index<0){
-            Cart.items.push({id:mobileinfo.id,itemname:mobileinfo.name,price:mobileinfo.price,qty:1})
-        }
-        else{
-            Cart.items[index].qty= Cart.items[index].qty+1
-        }
-    }
+    //     let index = Cart.items.findIndex((p)=>p.id==pid);
+    //     console.log(index)
+    //     if(index<0){
+    //         Cart.items.push({id:mobileinfo.id,itemname:mobileinfo.name,price:mobileinfo.price,qty:1})
+    //     }
+    //     else{
+    //         Cart.items[index].qty= Cart.items[index].qty+1
+    //     }
+    // }
 
     return (
         <>
@@ -155,10 +159,11 @@ export default function MobileDetails() {
                     <div className="space-y-4">
                         <h2 className="text-xl font-semibold text-gray-900">Rating</h2>
                         <p className="text-sm text-gray-700">{mobileinfo.rating} / 5 <Rating r={mobileinfo.rating}></Rating></p>
-                          <button onClick={()=>addtocart()} className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                          {/* <button onClick={()=>addtocart()} className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
                             Add to Cart
-                        </button>
-                        <Counter></Counter>
+                        </button> */}
+                        <ItemCounter pid={pid}></ItemCounter>
+                        {/* <Counter></Counter> */}
                     </div>
                     
                 </div>

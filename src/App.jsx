@@ -16,13 +16,15 @@ import { Cartcontext } from './context/Cartcontext'
 import Cart from "./component/Cart"
 function App() {
   const [count, setCount] = useState(0)
+  const [masterItems,setMasterItems] = useState([])
 
   return (
     <>
     <Link to="/cart" className='underline m-5'>go to Cart</Link>
     <Link to="/mobiles"> mobiles</Link>
     <Usercontext.Provider value={{username:"vishal" ,email:"labanababu1510@gmail.com"}}>
-    <Cartcontext.Provider value={{items:[]}} >
+    {/* <Cartcontext.Provider value={{items:[]}} > */}
+    <Cartcontext.Provider value={{items:masterItems,setitems:setMasterItems}}>
     <div>
     {/* <Userhome></Userhome> */}
     <Routes>
