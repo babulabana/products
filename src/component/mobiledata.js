@@ -115,6 +115,37 @@ import a52 from "../image/ac/a52.jpg";
 import a53 from "../image/ac/a53.jpg";
 import a54 from "../image/ac/a54.jpg";
 
+//cooler
+
+import cm1 from "../image/cooler/cm1.jpg";
+import c11 from "../image/cooler/c11.jpg";
+import c12 from "../image/cooler/c12.jpg";
+import c13 from "../image/cooler/c13.jpg";
+import c14 from "../image/cooler/c14.jpg";
+
+import cm2 from "../image/cooler/cm2.jpg";
+import c21 from "../image/cooler/c21.jpg";
+import c22 from "../image/cooler/c22.jpg";
+import c23 from "../image/cooler/c23.jpg";
+import c24 from "../image/cooler/c24.jpg";
+
+import cm3 from "../image/cooler/cm3.jpg";
+import c31 from "../image/cooler/c31.jpg";
+import c32 from "../image/cooler/c32.jpg";
+import c33 from "../image/cooler/c43.jpg";
+import c34 from "../image/cooler/c44.jpg";
+
+import cm4 from "../image/cooler/cm4.jpg";
+import c41 from "../image/cooler/c41.jpg";
+import c42 from "../image/cooler/c42.jpg";
+import c43 from "../image/cooler/c43.jpg";
+import c44 from "../image/cooler/c44.jpg";
+
+import cm5 from "../image/cooler/cm5.jpg";
+import c51 from "../image/cooler/c51.jpg";
+import c52 from "../image/cooler/c52.jpg";
+import c53 from "../image/cooler/c53.jpg";
+import c54 from "../image/cooler/c54.jpg";
 var mdata = [
   {
     id: 1,
@@ -597,6 +628,115 @@ var mdata = [
     rating: 4.5,
     additionalImages: [t51,t52,t53,t54],
   },
+
+  {
+    id: 20,
+    img: cm1,
+    name:"Bajaj DMH 90 ",
+    ModelName:	"Air Cooler",
+    Brand:"Bajaj",
+    price:"12999",
+    DiscountedPrice:"10999",
+    MountingType	:"Freestanding",
+    SpecialFeature :"Adjustable Speed",
+    Colour:	"White",
+    AirFlowCapacity:	"5600 Cubic Feet Per Minute",
+    ControlsType	:"Knob",
+    ReservoirCapacity	:"85 litres",
+    FloorArea	:"650 Square Feet",
+    ModelName:	"Air Cooler",
+    IncludedComponents:"1 air cooler with accessories",
+    ItemWeight:"17400 Grams",
+    Wattage:"200 Watts",
+    WARRANTY: "1 year provided by Crompton from date of purchase.",
+    Rating:4.5,
+    img2:[c11,c12,c13,c14]
+  },
+  {
+    id: 21,
+    img: cm2,
+    name:"Havells 2-in-1 Convertible ",
+    brand: 'Havells',
+    price:"27490",
+    DiscountedPrice:"13499",
+    mountingType: 'Floor Mount',
+    specialFeatures: ['Silent Operation', 'Portable'],
+    color: 'Grey',
+    airFlowCapacity: '2060 Cubic Feet Per Minute',
+    controlsType: 'Knob',
+    floorArea: '409 Square Feet',
+    recommendedUses: 'Residential',
+    includedComponents: [
+    '5 N Castor Wheels',
+    '1 N Desert Cooler',
+    '1 N Instructional Manual',],
+    standbyPowerConsumption: '185 Watts',
+    ItemWeight:"18000 Grams",
+    Wattage:"185 Watts",
+    rating: 4,
+    img2:[c21,c22,c23,c24]
+  },
+  {
+    id: 22,
+    img: cm3,
+    name:"Crompton Ozone",
+    ModelName :	"Ozone",
+    Brand:	"Crompton",
+    price:"17200",
+    DiscountedPrice:"9499",
+    Mounting: "Type	Freestanding",
+    SpecialFeature:	"75",
+    Colour:	"White & Teal",
+    AirFlowCapacity:	"1 Cubic Feet Per Minute",
+    ControlsType	:"Remote",
+    ReservoirCapacity:	"75 litres",
+    RecommendedUsesForProduct:	"Commercial",
+    IncludedComponents:"cooler, user manual and warranty card",
+    ItemWeight:"14500 Grams",
+    Wattage:"190 Watts",
+    img2:[c31,c32,c33,c34]
+  },
+  {
+   id: 23,
+   img: cm4,
+   name:"Crompton Marvel ",
+   brand: 'Crompton',
+   price:"10000",
+   DiscountedPrice:"5999",
+   mountingType: 'Freestanding',
+   specialFeature: 'Auto Fill',
+   color: 'White',
+   airFlowCapacity: '1300 CMPH',
+   controlsType: 'Remote',
+   reservoirCapacity: '40 litres',
+   modelName: 'Marvel Neo 40',
+   recommendedUsesForProduct: 'Commercial',
+   includedComponents: '1 Air Cooler',
+   ItemWeight:"4000 Grams",
+   Wattage:"165 Watts",
+   img2:[c41,c42,c43,c44]
+
+  },
+  {
+  id:24,
+  img:cm5,
+  name:"HAVAI ",
+  brand: 'HAVAI',
+  price:"12990",
+  DiscountedPrice:"7990",
+  mountingType: 'Freestanding',
+  specialFeature: 'Adjustable Speed',
+  color: 'Black',
+  airFlowCapacity: '3500 Cubic Feet Per Minute',
+  controlsType: 'Knob',
+  reservoirCapacity: '70 litres',
+  floorArea: '400.00',
+  recommendedUsesForProduct: 'residential and commercial cooling for large spaces, events',
+  includedComponents: 'Wheels, Instruction manual',
+  ItemWeight:"12 KG",
+   Wattage:"150 Watts",
+  img2:[c51,c52,c53,c54]
+  }
 
 
 
