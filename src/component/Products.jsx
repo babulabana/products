@@ -62,6 +62,8 @@ import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'; // Corrected import for Link
 import { prodts } from './Productdata';
 import Rating from './Rating';
+
+import ItemCounter from './ItemCounter';
 export default function Products(props) {
     const location = useLocation();
     const navigate = useNavigate();
@@ -96,6 +98,7 @@ export default function Products(props) {
                 >
                     View Details
                 </Link>
+                <ItemCounter pid={p._id}></ItemCounter>
             </div>
         </div>
     ));

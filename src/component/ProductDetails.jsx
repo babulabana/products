@@ -63,6 +63,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { prodts } from './Productdata';
 import Rating from './Rating';
+import ItemCounter from './ItemCounter';
 
 export default function ProductDetails() {
     let params = useParams();
@@ -73,6 +74,11 @@ export default function ProductDetails() {
         const p = prodts.find((p) => p._id == pid);
         setProduct(p);
     }, [pid]);
+
+   
+    // const [mobileinfo, setmobileinfo] = useState(prodts.find((p) => p.id == pid));
+
+    const [index,setindex] = useState(Cart.items.findIndex((p)=>p.id==pid))
 
     return (
         <div className="min-h-screen bg-gray-100 py-8">
@@ -103,6 +109,7 @@ export default function ProductDetails() {
                         {/* <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
                             Add to Cart
                         </button> */}
+                         <ItemCounter pid={pid}></ItemCounter>
                     </div>
                 </div>
             </div>
