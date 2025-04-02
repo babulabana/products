@@ -27,7 +27,7 @@ function App() {
     {/* <Cartcontext.Provider value={{items:[]}} > */}
     <Cartcontext.Provider value={{items:masterItems,setitems:setMasterItems}}>
     <div>
-    {/* <Userhome></Userhome> */}
+    <Userhome></Userhome>
     <Routes>
       
     <Route path='/cart' element={<Cart></Cart>}></Route>

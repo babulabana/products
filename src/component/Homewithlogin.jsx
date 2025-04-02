@@ -7,8 +7,8 @@ export default function HomeWithlogin() {
     const [userlogin ,setuserlogin] = useState(false)
 
     let ui = <div>
-      <Userhome userlogin={userlogin} setuserlogin={setuserlogin}></Userhome>
-    <Logout setuserlogi={setuserlogin}></Logout></div>
+      <Userhome userlogin={userlogin} setuserlogin={setuserlogin} ></Userhome>
+    <Logout setuserlogin={setuserlogin}></Logout></div>
   return (
     <div >
       
