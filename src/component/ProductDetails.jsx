@@ -61,24 +61,25 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { prodts } from './Productdata';
+// import { prodts } from './Productdata';
+import mdata from './mobiledata';
 import Rating from './Rating';
 import ItemCounter from './ItemCounter';
-
+import Cart from "./Cart"
 export default function ProductDetails() {
     let params = useParams();
     let pid = params.pid;
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        const p = prodts.find((p) => p._id == pid);
+        const p = mdata.find((p) => p._id == pid);
         setProduct(p);
     }, [pid]);
 
    
     // const [mobileinfo, setmobileinfo] = useState(prodts.find((p) => p.id == pid));
 
-    const [index,setindex] = useState(Cart.items.findIndex((p)=>p.id==pid))
+    const [index,setindex] = useState(Cart.items.findIndex((p) => p.id == pid))
 
     return (
         <div className="min-h-screen bg-gray-100 py-8">

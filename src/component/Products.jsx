@@ -60,10 +60,12 @@
 // }
 import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'; // Corrected import for Link
-import { prodts } from './Productdata';
+// import { prodts } from './Productdata';
+//  import mdata from './mobiledata';
 import Rating from './Rating';
 
 import ItemCounter from './ItemCounter';
+import mdata from './mobiledata';
 export default function Products(props) {
     const location = useLocation();
     const navigate = useNavigate();
@@ -77,9 +79,9 @@ export default function Products(props) {
     }, [location, navigate]);
 
     // Map through the products and create cards
-    let prodtsui = prodts.map((p) => (
+    let mdataui = mdata.map((p) => (
         <div
-            key={p._id}
+            key={p.id}
             className="flex flex-col items-center p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow bg-white"
         >
             <img src={p.img} alt={p.title} className="w-full h-48 object-cover rounded-t-lg" />
@@ -88,17 +90,17 @@ export default function Products(props) {
                 <p className="text-sm text-gray-600">{p.category}</p>
                 <div className="mt-2">
                     <p className="text-lg font-bold text-gray-900">₹{p.price}</p>
-                    <p className="text-sm text-gray-500 line-through">₹{p.oldPrice}</p>
+                    {/* <p className="text-sm text-gray-500 line-through">₹{p.oldPrice}</p> */}
                 </div>
 
                 <p className="text-sm text-yellow-600">Rating: {p.rating} / 5 <Rating r={p.rating}></Rating></p>
                 <Link
-                    to={`/productdetails/${p._id}`}
+                    to={`/productdetails/${p.id}`}
                     className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                     View Details
                 </Link>
-                <ItemCounter pid={p._id}></ItemCounter>
+                <ItemCounter pid={p.id}></ItemCounter>
             </div>
         </div>
     ));
@@ -107,7 +109,7 @@ export default function Products(props) {
         <div className="container mx-auto p-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Products</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                {prodtsui}
+                {mdataui}
             </div>
         </div>
     );
