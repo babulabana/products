@@ -14,6 +14,7 @@ import Mobiles from './component/Mobiles'
 import { Usercontext } from './context/Usercontext'
 import { Cartcontext } from './context/Cartcontext'
 import Cart from "./component/Cart"
+import Profile from './component/Profile'
 function App() {
   const [count, setCount] = useState(0)
   const [masterItems,setMasterItems] = useState([])
@@ -36,7 +37,7 @@ function App() {
     <Route path='/userhome' element={<Userhome></Userhome>}></Route>
     <Route path='/homewithlogin' element={<HomeWithlogin></HomeWithlogin>}></Route>
     <Route path='/' element={<HomeWithlogin></HomeWithlogin>}></Route>
-    
+    <Route path='/profile'  element={<Profile></Profile>}></Route>
     <Route path='/products' element={<Products></Products>}></Route>
     <Route path='/productdetails/:pid' element={<ProductDetails></ProductDetails>}></Route>
     <Route path='/mobiledetails/:pid' element={<MobileDetails></MobileDetails>}></Route>
