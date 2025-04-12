@@ -61,6 +61,9 @@ import { useSelector } from "react-redux";
 import Forincrement from "./component/redux/Forincrement";
 import { Link, Route, Routes } from "react-router";
 import Showcount from "./component/redux/Showcount";
+import LoginR from "./component/redux/LoginR"
+import LogoutR from "./component/redux/LogoutR"
+import HomeR from "./component/redux/HomeR"
 function App(){
   const username = useSelector((data)=>data.counter.username)
   return (
@@ -68,14 +71,19 @@ function App(){
  <div className="flex gap-5">
  {/* npm install  react-redux
  npm install @reduxjs/toolkit react-redux */}
- <Link to="/">counter</Link>
+ <Link to="/forincrement">counter</Link>
  <Link to="/showcount">showcount</Link>
  </div>
  
  <h1>Welcome <span className="text-2xl text-blue-500">{username}</span></h1>
- <Routes><Route path="/showcount" element={<Showcount></Showcount>}></Route>
- <Route path="/" element={<Forincrement></Forincrement>}></Route>
+ <Routes>
+  <Route path="/" element={<HomeR></HomeR>}></Route>
+  <Route path="/login" element={<LoginR></LoginR>}></Route>
+  <Route path="/logout" element={<LogoutR></LogoutR>}> </Route>
+  <Route path="/showcount" element={<Showcount></Showcount>}></Route>
+  <Route path="/forincrement" element={<Forincrement></Forincrement>}></Route>
  </Routes>
+
  </>    
    )
  }
